@@ -35,8 +35,8 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+        <section className="py-12 md:py-16 px-4 md:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="space-y-4">
               <BounceUp>
                 <div className="bg-white rounded-2xl shadow-card p-5 border border-border">
