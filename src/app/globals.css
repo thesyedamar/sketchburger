@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-dm), sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-yellow text-dark font-nunito font-bold rounded-full px-8 py-3.5 shadow-btn;
+    animation: btnPulse 2.5s ease infinite;
+  }
+  
+  .btn-primary:hover {
+    @apply brightness-110 scale-105;
+  }
+  
+  .btn-primary:active {
+    @apply scale-95;
+  }
+  
+  .wa-btn {
+    @apply bg-[#25D366] text-white font-nunito font-bold rounded-full;
+    animation: waPulse 2s infinite;
+  }
+  
+  .food-image {
+    filter: drop-shadow(0 15px 35px rgba(0,0,0,0.12));
+  }
+  
+  .food-image-heavy {
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.2));
+  }
+}
+
+@keyframes btnPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255,197,0,0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(255,197,0,0.6);
+  }
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37,211,102,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
