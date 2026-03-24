@@ -13,17 +13,23 @@ import BounceUp from "@/components/ui/BounceUp";
 import { menuData } from "@/lib/menuData";
 
 const categories = [
-  { key: "burgers", label: "Burgers" },
-  { key: "rolls", label: "Rolls" },
-  { key: "pizza", label: "Pizza" },
-  { key: "sandwiches", label: "Sandwiches" },
+  { key: "pakistani", label: "Pakistani" },
+  { key: "chinese", label: "Chinese" },
+  { key: "soups", label: "Soups" },
   { key: "drinks", label: "Drinks" },
-  { key: "desserts", label: "Desserts" },
+  { key: "fries", label: "Fries" },
+  { key: "sandwiches", label: "Sandwich" },
+  { key: "salads", label: "Salads" },
+  { key: "pizzas", label: "Pizzas" },
+  { key: "wraps", label: "Wraps" },
+  { key: "burgers", label: "Burgers" },
+  { key: "fried", label: "Fried" },
+  { key: "pastas", label: "Pastas" },
   { key: "deals", label: "Deals" },
 ];
 
 export default function MenuPage() {
-  const [activeCategory, setActiveCategory] = useState("burgers");
+  const [activeCategory, setActiveCategory] = useState("pakistani");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +90,7 @@ export default function MenuPage() {
                   transition={{ delay: 0.2 }}
                   className="font-dm text-gray text-lg mt-4 max-w-md"
                 >
-                  Explore our delicious range of burgers, rolls, pizza, and more — made fresh daily with love.
+                  Explore our delicious range of Pakistani, Chinese, Pizzas, Burgers, Wraps and more — made fresh daily with love.
                 </motion.p>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -93,7 +99,7 @@ export default function MenuPage() {
                   className="flex gap-4 mt-8"
                 >
                   <div className="bg-yellow/20 px-5 py-2 rounded-full">
-                    <span className="font-nunito font-bold text-dark">28+ Items</span>
+                    <span className="font-nunito font-bold text-dark">85+ Items</span>
                   </div>
                   <div className="bg-green/20 px-5 py-2 rounded-full">
                     <span className="font-nunito font-bold text-green">Fresh Daily</span>
