@@ -99,8 +99,8 @@ export default function Hero() {
               className="relative z-10"
             >
               <Image
-                src="/images/burger.png"
-                alt="Smash Burger"
+                src="/images/pizza.png"
+                alt="Delicious Pizza"
                 width={350}
                 height={350}
                 className="w-48 h-48 sm:w-64 sm:h-64 md:w-[450px] md:h-[450px] max-w-full h-auto drop-shadow-2xl"
