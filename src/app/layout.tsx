@@ -21,10 +21,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sketch Burger Dargai — Dargai's Juiciest Burgers",
+  title: "MEAT'n CHEESE - Fast Food Restaurant Dargai",
   description:
-    "Handcrafted smash burgers, crispy rolls and premium street food. Order on WhatsApp for fast delivery in Dargai, Malakand KPK.",
-  keywords: "Sketch Burger, Dargai, burgers, rolls, fast food, delivery, Malakand, KPK",
+    "Best fast food in Dargai. Order now for fast delivery near Army Forte Dargai.",
+  keywords: "MEATnCHEESE, fast food, Dargai, burgers, rolls, delivery,KPK",
 };
 
 export default function RootLayout({

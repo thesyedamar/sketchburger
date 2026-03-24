@@ -11,39 +11,38 @@ export default function Footer() {
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">ADDRESS</h3>
             <Link href="/" className="flex items-center gap-1 mb-4">
-              <span className="text-xl">🍔</span>
               <span className="font-fredoka text-xl">
-                <span className="text-white">SKETCH</span>
-                <span className="text-yellow">BURGER</span>
+                <span className="text-yellow">MEAT&apos;n</span>
+                <span className="text-white"> CHEESE</span>
               </span>
             </Link>
             <div className="flex flex-col gap-3 text-gray-300 font-dm text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-yellow mt-1 flex-shrink-0" />
-                <span>Dargai Phattak, Near Avicena School, Malakand District, KPK, Pakistan</span>
+                <span>Near Army Forte Dargai, Dargai, 23060</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-yellow flex-shrink-0" />
-                <span>0341-1175466</span>
+                <span>0370 9119991</span>
               </div>
             </div>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://facebook.com/sketchburgerdargai"
+                href="https://facebook.com"
                 target="_blank"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com/sketchburgermkd"
+                href="https://instagram.com/meatnncheese"
                 target="_blank"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923411175466"
+                href="https://wa.me/923709119991"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -69,8 +68,8 @@ export default function Footer() {
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">OPENING HOURS</h3>
             <div className="font-dm text-gray-300 text-sm space-y-2">
-              <p>Monday – Sunday: 10:00 AM – 11:00 PM</p>
-              <p>Delivery available all hours</p>
+              <p>Open Daily: 11:30 AM - 11:30 PM</p>
+              <p>Delivery available</p>
               <div className="flex items-center gap-2 mt-2">
                 <span className="w-2 h-2 rounded-full bg-green pulse-green"></span>
                 <span className="text-green">Open Now</span>
@@ -98,10 +97,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-dm text-gray-500 text-xs">
-            © 2025 Sketch Burger. All rights reserved.
+            © 2025 MEAT&apos;n CHEESE. All rights reserved.
           </p>
           <p className="font-dm text-gray-500 text-xs">
-            Made with ❤️ in Dargai, KPK
+            Made with ❤️ in Dargai, Pakistan
           </p>
         </div>
       </div>

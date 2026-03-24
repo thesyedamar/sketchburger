@@ -16,7 +16,7 @@ export default function ContactPage() {
     const message = formData.get("message");
     
     const text = `Hi! I'm ${name}.\n\nPhone: ${phone}\n\nOrder: ${message}`;
-    const url = `https://wa.me/923411175466?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/923709119991?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
                   <MapPin className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">ADDRESS</p>
                   <p className="font-dm text-gray text-sm mt-1">
-                    Dargai Phattak, Near Avicena School, Malakand District, KPK, Pakistan
+                    Near Army Forte Dargai, Dargai, 23060
                   </p>
                 </div>
               </BounceUp>
@@ -52,8 +52,8 @@ export default function ContactPage() {
                 <div className="bg-white rounded-2xl shadow-card p-5 border border-border">
                   <Phone className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">PHONE</p>
-                  <a href="tel:03411175466" className="font-dm text-gray text-sm hover:text-yellow">
-                    0341-1175466
+                  <a href="tel:03709119991" className="font-dm text-gray text-sm hover:text-yellow">
+                    0370 9119991
                   </a>
                 </div>
               </BounceUp>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <MessageCircle className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">WHATSAPP</p>
                   <a
-                    href="https://wa.me/923411175466"
+                    href="https://wa.me/923709119991"
                     className="inline-block mt-1 bg-[#25D366] text-white font-nunito font-bold text-sm px-4 py-2 rounded-full"
                   >
                     Chat on WhatsApp
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   <Clock className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">OPENING HOURS</p>
                   <p className="font-dm text-gray text-sm mt-1">
-                    10:00 AM – 11:00 PM (Daily)
+                    Open Daily: 11:30 AM - 11:30 PM
                   </p>
                 </div>
               </BounceUp>
@@ -86,10 +86,10 @@ export default function ContactPage() {
                   <Instagram className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">SOCIAL</p>
                   <a
-                    href="https://instagram.com/sketchburgermkd"
+                    href="https://instagram.com/meatnncheese"
                     className="font-dm text-gray text-sm hover:text-yellow"
                   >
-                    @sketchburgermkd
+                    @meatnncheese
                   </a>
                 </div>
               </BounceUp>

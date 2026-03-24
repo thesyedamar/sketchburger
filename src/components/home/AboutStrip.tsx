@@ -34,7 +34,7 @@ export default function AboutStrip() {
               <span className="text-yellow">Pakistani Love</span>
             </h2>
             <p className="font-dm text-gray leading-relaxed mb-6">
-              At Sketch Burger, every bite tells a story of fresh ingredients, secret recipes passed down with passion, and the dedication to give Dargai the best burger experience it deserves.
+              At MEAT&apos;n CHEESE, every bite tells a story of fresh ingredients, secret recipes passed down with passion, and the dedication to give Dargai the best fast food experience it deserves.
             </p>
             <button className="bg-yellow text-dark font-nunito font-bold rounded-full px-8 py-3 hover:bg-yellow-light transition-colors">
               Read More

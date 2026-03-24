@@ -26,7 +26,7 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="inline-block bg-yellow/20 text-yellow rounded-full px-3 py-1 text-xs md:text-sm font-nunito font-semibold mb-3 md:mb-4"
             >
-              ⭐ Dargai&apos;s #1 Burger Spot
+              ⭐ Dargai&apos;s Best Fast Food
             </motion.span>
 
             <motion.h1
@@ -35,8 +35,8 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="font-fredoka text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-dark leading-tight"
             >
-              <span className="block">SKETCH</span>
-              <span className="block text-yellow">BURGER</span>
+              <span className="block">MEAT&apos;n</span>
+              <span className="block text-yellow">CHEESE</span>
             </motion.h1>
 
             <motion.div
@@ -45,7 +45,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="inline-block bg-green/20 text-green rounded px-3 py-0.5 mt-2 md:mt-3 font-nunito italic text-xs md:text-sm"
             >
-              Dargai Phattak, Malakand — Fresh Daily
+              Near Army Forte Dargai — Fresh Daily
             </motion.div>
 
             <motion.p
@@ -54,7 +54,7 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="font-dm text-gray text-sm md:text-base leading-relaxed max-w-sm mt-3 md:mt-4"
             >
-              Handcrafted smash burgers, crispy rolls and premium street food — made fresh to order in the heart of Dargai.
+              Delicious fast food, burgers, rolls and more — made fresh to order near Army Forte Dargai.
             </motion.p>
 
             <motion.div

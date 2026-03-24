@@ -7,19 +7,19 @@ const testimonials = [
   {
     name: "Hamza K.",
     location: "Dargai",
-    text: "The burgers here are absolutely amazing. Fresh ingredients every time. Best in Dargai without a doubt!",
+    text: "The food here is absolutely amazing. Fresh ingredients every time. Best in Dargai without a doubt!",
     stars: 5,
   },
   {
     name: "Fatima R.",
-    location: "Malakand",
-    text: "Super fast delivery and the smash burger was perfectly crispy. Will definitely order again tomorrow!",
+    location: "Dargai",
+    text: "Super fast delivery and the meals are perfectly tasty. Will definitely order again tomorrow!",
     stars: 5,
   },
   {
     name: "Usman T.",
     location: "Dargai",
-    text: "The Zinger roll blew my mind. Family loved everything. Sketch Burger is our weekly treat now.",
+    text: "The rolls blew my mind. Family loved everything. MEAT'n CHEESE is our weekly treat now.",
     stars: 5,
   },
 ];
