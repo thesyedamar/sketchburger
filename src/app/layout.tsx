@@ -21,10 +21,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MEAT'n CHEESE - Fast Food Restaurant Dargai",
+  title: "Village Kitchen Dargai - Fast Food Restaurant",
   description:
-    "Best fast food in Dargai. Order now for fast delivery near Army Forte Dargai.",
-  keywords: "MEATnCHEESE, fast food, Dargai, burgers, rolls, delivery,KPK",
+    "Best fast food in Dargai. Order now for fast delivery.",
+  keywords: "Village Kitchen, fast food, Dargai, burgers, rolls, pizza, delivery",
 };
 
 export default function RootLayout({

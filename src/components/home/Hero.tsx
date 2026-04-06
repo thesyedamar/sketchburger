@@ -35,8 +35,8 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="font-fredoka text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-dark leading-tight"
             >
-              <span className="block">MEAT&apos;n</span>
-              <span className="block text-yellow">CHEESE</span>
+              <span className="block">Village</span>
+              <span className="block text-yellow">Kitchen</span>
             </motion.h1>
 
             <motion.div
@@ -45,7 +45,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="inline-block bg-green/20 text-green rounded px-3 py-0.5 mt-2 md:mt-3 font-nunito italic text-xs md:text-sm"
             >
-              Near Army Forte Dargai — Fresh Daily
+              Dargai Branch — Fresh Daily
             </motion.div>
 
             <motion.p

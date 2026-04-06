@@ -7,7 +7,7 @@ interface CartItem {
 
 export function buildWhatsAppURL(items: CartItem[], total: number): string {
   const header =
-    "Hi! I'd like to order from *MEAT'n CHEESE* (Dargai):\n\n";
+    "Hi! I'd like to order from *Village Kitchen Dargai*:\n\n";
   const lines = items.map(
     (i) =>
       `• ${i.qty}x ${i.name} — PKR ${(i.price * i.qty).toLocaleString()}`

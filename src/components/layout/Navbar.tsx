@@ -37,8 +37,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-1">
           <span className="font-fredoka text-xl md:text-2xl">
-            <span className="text-yellow">MEAT&apos;n</span>
-            <span className="text-dark"> CHEESE</span>
+            <span className="text-yellow">Village</span>
+            <span className="text-dark"> Kitchen</span>
           </span>
         </Link>
 
@@ -55,9 +55,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:03709119991" className="flex items-center gap-2 text-dark font-nunito text-sm">
+          <a href="tel:03471900500" className="flex items-center gap-2 text-dark font-nunito text-sm">
             <Phone className="w-4 h-4 text-yellow" />
-            <span>0370 9119991</span>
+            <span>0347 1900500</span>
           </a>
           <Link href="/menu" className="p-2 hover:text-yellow transition-colors relative">
             <ShoppingBag className="w-5 h-5" />
@@ -68,7 +68,7 @@ export default function Navbar() {
             )}
           </Link>
           <a
-            href="https://wa.me/923709119991"
+            href="https://wa.me/923471900500"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-green hover:scale-110 transition-transform"
@@ -105,12 +105,12 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center justify-between pt-2">
-                <a href="tel:03709119991" className="flex items-center gap-2 text-dark font-nunito text-sm">
+                <a href="tel:03471900500" className="flex items-center gap-2 text-dark font-nunito text-sm">
                   <Phone className="w-4 h-4 text-yellow" />
-                  <span>0370 9119991</span>
+                  <span>0347 1900500</span>
                 </a>
                 <a
-                  href="https://wa.me/923709119991"
+                  href="https://wa.me/923471900500"
                   target="_blank"
                   className="p-2 text-green"
                 >

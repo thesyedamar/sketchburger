@@ -12,18 +12,18 @@ export default function Footer() {
             <h3 className="font-nunito font-bold text-yellow mb-4">ADDRESS</h3>
             <Link href="/" className="flex items-center gap-1 mb-4">
               <span className="font-fredoka text-xl">
-                <span className="text-yellow">MEAT&apos;n</span>
-                <span className="text-white"> CHEESE</span>
+                <span className="text-yellow">Village</span>
+                <span className="text-white"> Kitchen</span>
               </span>
             </Link>
             <div className="flex flex-col gap-3 text-gray-300 font-dm text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-yellow mt-1 flex-shrink-0" />
-                <span>Near Army Forte Dargai, Dargai, 23060</span>
+                <span>GV5X+2F6, Dargai</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-yellow flex-shrink-0" />
-                <span>0370 9119991</span>
+                <span>0347 1900500</span>
               </div>
             </div>
             <div className="flex gap-3 mt-4">
@@ -35,14 +35,14 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com/meatnncheese"
+                href="https://instagram.com"
                 target="_blank"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923709119991"
+                href="https://wa.me/923471900500"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-dm text-gray-500 text-xs">
-            © 2025 MEAT&apos;n CHEESE. All rights reserved.
+            © 2025 Village Kitchen. All rights reserved.
           </p>
           <p className="font-dm text-gray-500 text-xs">
             Made with ❤️ in Dargai, Pakistan

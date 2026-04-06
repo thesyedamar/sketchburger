@@ -86,10 +86,10 @@ export default function ContactPage() {
                   <Instagram className="w-8 h-8 text-yellow mb-2" />
                   <p className="font-nunito font-semibold text-dark text-sm">SOCIAL</p>
                   <a
-                    href="https://instagram.com/meatnncheese"
+                    href="https://instagram.com/villagekitchendargai"
                     className="font-dm text-gray text-sm hover:text-yellow"
                   >
-                    @meatnncheese
+                    @villagekitchendargai
                   </a>
                 </div>
               </BounceUp>
