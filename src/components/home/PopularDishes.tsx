@@ -11,13 +11,16 @@ export default function PopularDishes() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="font-fredoka text-dark text-3xl">Popular dishes</h2>
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <span className="text-xs font-nunito font-bold text-yellow uppercase tracking-wider">Top Rated in I-8 Markaz</span>
+            <h2 className="font-fredoka text-dark text-3xl md:text-4xl mt-1">Signature Highlights</h2>
+          </div>
           <Link
             href="/menu"
-            className="font-nunito text-yellow text-sm font-semibold flex items-center gap-1 hover:underline"
+            className="font-nunito text-dark hover:text-yellow text-sm font-bold flex items-center gap-1 transition-colors"
           >
-            Log In <ArrowRight className="w-4 h-4" />
+            View Full Menu <ArrowRight className="w-4 h-4 text-yellow" />
           </Link>
         </div>
 

@@ -35,10 +35,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-1">
-          <span className="font-fredoka text-xl md:text-2xl">
-            <span className="text-yellow">Village</span>
-            <span className="text-dark"> Kitchen</span>
+        <Link href="/" className="flex items-center gap-2">
+          <span className="font-fredoka text-xl md:text-2xl tracking-wide">
+            <span className="text-yellow">Grill</span>
+            <span className="text-dark"> Yard</span>
+          </span>
+          <span className="hidden sm:inline-block bg-yellow/15 text-dark font-nunito font-bold text-[11px] px-2.5 py-0.5 rounded-full border border-yellow/30">
+            I-8 Markaz
           </span>
         </Link>
 
@@ -55,11 +58,11 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:03471900500" className="flex items-center gap-2 text-dark font-nunito text-sm">
+          <a href="tel:03205401241" className="flex items-center gap-2 text-dark font-nunito text-sm hover:text-yellow transition-colors">
             <Phone className="w-4 h-4 text-yellow" />
-            <span>0347 1900500</span>
+            <span>0320 5401241</span>
           </a>
-          <Link href="/menu" className="p-2 hover:text-yellow transition-colors relative">
+          <Link href="/menu" className="p-2 hover:text-yellow transition-colors relative" aria-label="Shopping Cart">
             <ShoppingBag className="w-5 h-5" />
             {totalItems > 0 && (
               <span className="absolute -top-1 -right-1 w-5 h-5 bg-yellow text-dark text-xs font-bold rounded-full flex items-center justify-center">
@@ -68,10 +71,11 @@ export default function Navbar() {
             )}
           </Link>
           <a
-            href="https://wa.me/923471900500"
+            href="https://wa.me/923205401241"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 text-green hover:scale-110 transition-transform"
+            aria-label="Order on WhatsApp"
           >
             <MessageCircle className="w-5 h-5" />
           </a>
@@ -80,6 +84,7 @@ export default function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden p-2"
+          aria-label="Toggle navigation menu"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -105,14 +110,16 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center justify-between pt-2">
-                <a href="tel:03471900500" className="flex items-center gap-2 text-dark font-nunito text-sm">
+                <a href="tel:03205401241" className="flex items-center gap-2 text-dark font-nunito text-sm">
                   <Phone className="w-4 h-4 text-yellow" />
-                  <span>0347 1900500</span>
+                  <span>0320 5401241</span>
                 </a>
                 <a
-                  href="https://wa.me/923471900500"
+                  href="https://wa.me/923205401241"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 text-green"
+                  aria-label="Chat on WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>

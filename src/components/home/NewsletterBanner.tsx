@@ -15,14 +15,20 @@ export default function NewsletterBanner() {
   return (
     <section className="bg-cream py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-fredoka text-dark text-2xl mb-6"
+          className="max-w-xl mx-auto mb-6"
         >
-          Join For Hot Offers
-        </motion.h2>
+          <span className="text-xs font-nunito font-bold text-yellow uppercase tracking-wider">Stay Connected</span>
+          <h2 className="font-fredoka text-dark text-3xl md:text-4xl mt-1">
+            Join the Grill Yard VIP Club
+          </h2>
+          <p className="font-dm text-gray text-sm mt-2">
+            Receive exclusive steakhouse promos, match screening announcements, and happy hour offers in I-8 Markaz.
+          </p>
+        </motion.div>
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-3">

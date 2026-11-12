@@ -7,25 +7,25 @@ import { useRef } from "react";
 
 const categories = [
   {
-    label: "Fresh Food",
-    title: "Meals",
-    price: "PKR 350",
-    bg: "#2D9142",
-    img: "photo-1565299624946-b28f40a0ae38",
+    label: "Prime Sizzling",
+    title: "Steaks",
+    price: "from PKR 2,150",
+    bg: "#7C1D1D",
+    img: "photo-1558030006-450675393462",
   },
   {
-    label: "House",
-    title: "Burgers",
-    price: "PKR 480",
-    bg: "#E65C00",
-    img: "photo-1568901346375-23c9450c58cd",
+    label: "Creamy Alfredo",
+    title: "Pastas",
+    price: "from PKR 1,250",
+    bg: "#B45309",
+    img: "photo-1621996346565-e3d5d6281724",
   },
   {
-    label: "Hot Fresh",
-    title: "Rolls",
-    price: "PKR 320",
+    label: "Continental",
+    title: "Chicken Kiev",
+    price: "from PKR 1,650",
     bg: "#FFC500",
-    img: "photo-1626700051175-6818013e1d4f",
+    img: "photo-1604908176997-125f25cc6f3d",
     isYellow: true,
   },
 ];
@@ -69,13 +69,14 @@ function CategoryCard({ cat, index }: { cat: typeof categories[0]; index: number
         <p className={`font-nunito text-lg ${cat.isYellow ? "text-dark" : "text-white"}`}>
           {cat.price}
         </p>
-        <button
-          className={`mt-4 px-6 py-2 rounded-full font-nunito font-bold text-sm ${
+        <a
+          href="/menu"
+          className={`inline-block mt-4 px-6 py-2 rounded-full font-nunito font-bold text-sm transition-transform hover:scale-105 ${
             cat.isYellow ? "bg-dark text-white" : "bg-yellow text-dark"
           }`}
         >
-          Order Now
-        </button>
+          Explore
+        </a>
       </div>
       
       <motion.div

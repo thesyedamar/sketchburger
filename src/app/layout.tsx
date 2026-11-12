@@ -1,30 +1,30 @@
 import type { Metadata } from "next";
-import { Fredoka, Nunito, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const fredoka = Fredoka({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const fredoka = localFont({
+  src: "./fonts/Fredoka.woff2",
   variable: "--font-fredoka",
+  display: "swap",
 });
 
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+const nunito = localFont({
+  src: "./fonts/Nunito.woff2",
   variable: "--font-nunito",
+  display: "swap",
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+const dmSans = localFont({
+  src: "./fonts/DMSans.woff2",
   variable: "--font-dm",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Village Kitchen Dargai - Fast Food Restaurant",
+  title: "Grill Yard Islamabad - Sizzling Steaks, Continental & Chinese Cuisines | I-8 Markaz",
   description:
-    "Best fast food in Dargai. Order now for fast delivery.",
-  keywords: "Village Kitchen, fast food, Dargai, burgers, rolls, pizza, delivery",
+    "Grill Yard is all about taste and quality! Enjoy premium sizzling steaks, gourmet burgers, artisan pastas, and Chinese cuisines in I-8 Markaz, Islamabad.",
+  keywords: "Grill Yard, Grill Yard Islamabad, steaks, I-8 Markaz, beef steak, peri peri steak, pasta, burgers, continental, restaurant Islamabad",
 };
 
 export default function RootLayout({

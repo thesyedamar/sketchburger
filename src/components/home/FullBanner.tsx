@@ -6,15 +6,15 @@ import { getImageUrl } from "@/lib/menuData";
 
 export default function FullBanner() {
   return (
-    <section className="relative h-[400px] md:h-[500px] overflow-hidden">
+    <section className="relative h-[420px] md:h-[500px] overflow-hidden">
       <Image
-        src={getImageUrl("photo-1628840042765-356cda07504e", 1800)}
-        alt="Delicious Burgers"
+        src={getImageUrl("photo-1544025162-d76694265947", 1800)}
+        alt="Grill Yard Sizzling Steaks"
         fill
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/70" />
 
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid md:grid-cols-3 items-center">
@@ -26,11 +26,12 @@ export default function FullBanner() {
           >
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="w-20 h-20 rounded-full bg-red flex items-center justify-center"
+              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              className="w-24 h-24 rounded-full bg-red flex flex-col items-center justify-center text-center p-2 shadow-2xl"
             >
-              <span className="font-nunito font-bold text-white text-sm">
-                30% OFF
+              <span className="font-fredoka text-white text-xs leading-none">4.5 ⭐</span>
+              <span className="font-nunito font-bold text-white text-[10px] uppercase mt-0.5">
+                Top Rated
               </span>
             </motion.div>
           </motion.div>
@@ -40,46 +41,49 @@ export default function FullBanner() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-nunito italic text-yellow text-xl mb-2"
+              className="font-nunito italic text-yellow text-xl mb-1"
             >
-              Super
+              Sizzling & Juicy
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               viewport={{ once: true }}
-              className="font-fredoka text-white text-6xl md:text-8xl italic"
+              className="font-fredoka text-white text-5xl md:text-7xl"
             >
-              Delicious
+              Grill Yard
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               viewport={{ once: true }}
-              className="font-fredoka text-yellow text-5xl md:text-7xl"
+              className="font-fredoka text-yellow text-4xl md:text-6xl tracking-wider"
             >
-              BURGERS
+              STEAKS
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               viewport={{ once: true }}
-              className="font-dm text-white/80 mt-2"
+              className="font-dm text-white/90 text-sm md:text-base mt-2"
             >
-              Fast! Hungry? Order Your Favourite Food!
+              Outdoor Seating · Live Sports · Open Till 12 AM in I-8 Markaz
             </motion.p>
-            <motion.button
+            <motion.a
+              href="https://wa.me/923205401241"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
-              className="btn-primary mt-6"
+              className="btn-primary inline-block mt-6"
             >
-              Order Now
-            </motion.button>
+              Order on WhatsApp
+            </motion.a>
           </div>
 
           <motion.div

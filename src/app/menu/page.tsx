@@ -13,23 +13,19 @@ import BounceUp from "@/components/ui/BounceUp";
 import { menuData } from "@/lib/menuData";
 
 const categories = [
-  { key: "pakistani", label: "Pakistani" },
-  { key: "chinese", label: "Chinese" },
-  { key: "soups", label: "Soups" },
-  { key: "drinks", label: "Drinks" },
-  { key: "fries", label: "Fries" },
-  { key: "sandwiches", label: "Sandwich" },
-  { key: "salads", label: "Salads" },
-  { key: "pizzas", label: "Pizzas" },
-  { key: "wraps", label: "Wraps" },
-  { key: "burgers", label: "Burgers" },
-  { key: "fried", label: "Fried" },
-  { key: "pastas", label: "Pastas" },
-  { key: "deals", label: "Deals" },
+  { key: "steaks", label: "Steaks" },
+  { key: "pastas", label: "Pastas & Lasagna" },
+  { key: "continental", label: "Continental & Chicken" },
+  { key: "burgers", label: "Gourmet Burgers" },
+  { key: "chinese", label: "Chinese & Wok" },
+  { key: "sides", label: "Sides & Wings" },
+  { key: "beverages", label: "Mocktails & Drinks" },
+  { key: "desserts", label: "Sizzling Desserts" },
+  { key: "deals", label: "Platters & Combos" },
 ];
 
 export default function MenuPage() {
-  const [activeCategory, setActiveCategory] = useState("pakistani");
+  const [activeCategory, setActiveCategory] = useState("steaks");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,10 +61,10 @@ export default function MenuPage() {
       <main className="pt-16 pb-36">
         <section className="bg-cream relative overflow-hidden py-16 md:py-20">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 text-6xl">🍔</div>
-            <div className="absolute top-20 right-20 text-4xl">🍕</div>
-            <div className="absolute bottom-10 left-1/4 text-5xl">🌭</div>
-            <div className="absolute bottom-20 right-1/3 text-4xl">🥤</div>
+            <div className="absolute top-10 left-10 text-6xl">🥩</div>
+            <div className="absolute top-20 right-20 text-4xl">🍝</div>
+            <div className="absolute bottom-10 left-1/4 text-5xl">🍔</div>
+            <div className="absolute bottom-20 right-1/3 text-4xl">🍹</div>
           </div>
           
           <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -77,11 +73,11 @@ export default function MenuPage() {
                 <div className="flex items-center gap-2 text-sm font-dm text-gray mb-3">
                   <Link href="/" className="hover:text-yellow transition-colors">Home</Link>
                   <ChevronRight className="w-4 h-4" />
-                  <span className="text-yellow font-semibold">Menu</span>
+                  <span className="text-yellow font-semibold">Grill Yard Menu</span>
                 </div>
                 <BounceUp>
                   <h1 className="font-fredoka text-dark text-5xl md:text-6xl lg:text-7xl">
-                    Our <span className="text-yellow">Menu</span>
+                    Grill Yard <span className="text-yellow">Menu</span>
                   </h1>
                 </BounceUp>
                 <motion.p 
@@ -90,19 +86,22 @@ export default function MenuPage() {
                   transition={{ delay: 0.2 }}
                   className="font-dm text-gray text-lg mt-4 max-w-md"
                 >
-                  Explore our delicious range of Pakistani, Chinese, Pizzas, Burgers, Wraps and more — made fresh daily with love.
+                  All about Taste and Quality! Explore our signature sizzling steaks, artisan pastas, Chicken Kiev, gourmet burgers, and Chinese delicacies in I-8 Markaz, Islamabad.
                 </motion.p>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="flex gap-4 mt-8"
+                  className="flex gap-4 mt-8 flex-wrap"
                 >
                   <div className="bg-yellow/20 px-5 py-2 rounded-full">
-                    <span className="font-nunito font-bold text-dark">85+ Items</span>
+                    <span className="font-nunito font-bold text-dark">4.5 ⭐ (649 Reviews)</span>
+                  </div>
+                  <div className="bg-orange/20 px-5 py-2 rounded-full">
+                    <span className="font-nunito font-bold text-orange">Rs 2,000–3,000 / person</span>
                   </div>
                   <div className="bg-green/20 px-5 py-2 rounded-full">
-                    <span className="font-nunito font-bold text-green">Fresh Daily</span>
+                    <span className="font-nunito font-bold text-green">Outdoor Seating</span>
                   </div>
                 </motion.div>
               </div>
@@ -115,8 +114,8 @@ export default function MenuPage() {
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-yellow/30 absolute inset-0 animate-pulse" />
                   <div className="relative z-10">
                     <Image
-                      src="/images/fastfood.png"
-                      alt="Our Menu"
+                      src="/images/BBQ.png"
+                      alt="Grill Yard Sizzling Steak"
                       width={400}
                       height={400}
                       className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl"
@@ -126,9 +125,9 @@ export default function MenuPage() {
                   <motion.div
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -top-2 -right-2 bg-red text-white text-xs font-bold px-3 py-1 rounded-full"
+                    className="absolute -top-2 -right-2 bg-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
                   >
-                    HOT!
+                    SIZZLING!
                   </motion.div>
                 </motion.div>
               </div>

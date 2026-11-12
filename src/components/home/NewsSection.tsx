@@ -8,25 +8,25 @@ import BounceUp from "@/components/ui/BounceUp";
 
 const news = [
   {
-    img: "photo-1568901346375-23c9450c58cd",
-    badge: "Offer",
-    date: "March 20, 2025",
-    title: "Try our new Smash Burger combo!",
-    desc: "Get 2 smash burgers + fries + 2 drinks for only PKR 1,200",
+    img: "photo-1551024709-8f23befc6f87",
+    badge: "Sizzling Dessert",
+    date: "4 days ago · @grillyardislamabad",
+    title: "Your dessert cravings have found their match!",
+    desc: "Rich moments, sweet memories, and a dessert worth every bite. Sizzling warm fudge brownie with vanilla ice cream.",
   },
   {
-    img: "photo-1628840042765-356cda07504e",
-    badge: "New",
-    date: "March 15, 2025",
-    title: "Pizza is back on the menu",
-    desc: "Stone-baked margherita and pepperoni pizza now available every evening",
+    img: "photo-1621996346565-e3d5d6281724",
+    badge: "Pasta Obsession",
+    date: "6 days ago · @grillyardislamabad",
+    title: "POV: You just found your new pasta obsession! 🍝",
+    desc: "Creamy cravings? Sorted. Taste buds? Happy. One plate is never enough with our creamy Alfredo Delight and Chef Special Pasta.",
   },
   {
-    img: "photo-1546173159-315724a31696",
-    badge: "New",
-    date: "March 10, 2025",
-    title: "Fresh shake flavors this season",
-    desc: "Mango, strawberry and lychee shakes now available at the counter",
+    img: "photo-1558030006-450675393462",
+    badge: "Steak Lover",
+    date: "A week ago · @grillyardislamabad",
+    title: "Serving looks & delicious moments in I-8 Markaz!",
+    desc: "The perfect excuse to step out, chill outdoors, and enjoy tender sizzling Peri Peri Steak and Chinese & Continental platters.",
   },
 ];
 
@@ -34,14 +34,19 @@ export default function NewsSection() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="font-fredoka text-dark text-3xl">Latest news</h2>
-          <Link
-            href="/#"
-            className="font-nunito text-yellow text-sm font-semibold flex items-center gap-1 hover:underline"
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <span className="text-xs font-nunito font-bold text-yellow uppercase tracking-wider">Follow @grillyardislamabad</span>
+            <h2 className="font-fredoka text-dark text-3xl md:text-4xl mt-1">Latest from Social Media</h2>
+          </div>
+          <a
+            href="https://instagram.com/grillyardislamabad"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-nunito text-dark hover:text-yellow text-sm font-bold flex items-center gap-1 transition-colors"
           >
-            See All <ArrowRight className="w-4 h-4" />
-          </Link>
+            Visit Instagram <ArrowRight className="w-4 h-4 text-yellow" />
+          </a>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">

@@ -7,16 +7,16 @@ interface CartItem {
 
 export function buildWhatsAppURL(items: CartItem[], total: number): string {
   const header =
-    "Hi! I'd like to order from *Village Kitchen Dargai*:\n\n";
+    "Hi! I'd like to order from *Grill Yard Islamabad (I-8 Markaz)*:\n\n";
   const lines = items.map(
     (i) =>
       `• ${i.qty}x ${i.name} — PKR ${(i.price * i.qty).toLocaleString()}`
   ).join("\n");
   const footer =
     `\n\n*Total: PKR ${total.toLocaleString()}*` +
-    `\n\nPlease confirm. JazakAllah! 🙏`;
+    `\n\nPlease confirm delivery/takeaway details. Thank you! 🙏`;
   return (
-    "https://wa.me/923709119991?text=" +
+    "https://wa.me/923205401241?text=" +
     encodeURIComponent(header + lines + footer)
   );
 }

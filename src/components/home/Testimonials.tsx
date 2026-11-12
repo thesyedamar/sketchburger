@@ -5,21 +5,31 @@ import BounceUp from "@/components/ui/BounceUp";
 
 const testimonials = [
   {
-    name: "Hamza K.",
-    location: "Dargai",
-    text: "The food here is absolutely amazing. Fresh ingredients every time. Best in Dargai without a doubt!",
+    name: "Sabeen Naz",
+    location: "Google Review · Local Guide",
+    dish: "Peri Peri Steak & Chef Special Pasta",
+    text: "The Peri Peri Steak and Chef Special Pasta were truly exceptional. Tender meat cooked to perfection, rich sauces, and wonderful vibrant outdoor seating in I-8 Markaz.",
     stars: 5,
   },
   {
-    name: "Fatima R.",
-    location: "Dargai",
-    text: "Super fast delivery and the meals are perfectly tasty. Will definitely order again tomorrow!",
+    name: "Charlie",
+    location: "Google Review",
+    dish: "Chicken Kiev & Sizzling Brownie",
+    text: "Best Chicken Kiev in Islamabad without a doubt! The garlic herb butter gushed out perfectly. The Sizzling Brownie with ice cream was a showstopper dessert.",
     stars: 5,
   },
   {
-    name: "Usman T.",
-    location: "Dargai",
-    text: "The rolls blew my mind. Family loved everything. MEAT'n CHEESE is our weekly treat now.",
+    name: "Saad Ur Rehman",
+    location: "Google Review",
+    dish: "Chef Special Beef Steak & Margherita",
+    text: "Amazing atmosphere for watching sports matches outdoors with friends while savoring a juicy medium steak and chilled Mint Margherita. 10/10 experience!",
+    stars: 5,
+  },
+  {
+    name: "Usama Tariq",
+    location: "Google Review",
+    dish: "Twin Steak & Loaded Fries",
+    text: "Consistency and taste are top-notch at Grill Yard. Steaks are tender and juicy, sides are generous, and the staff is genuinely welcoming. Highly recommended in I-8!",
     stars: 5,
   },
 ];
@@ -28,11 +38,18 @@ export default function Testimonials() {
   return (
     <section className="bg-cream py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="font-fredoka text-dark text-3xl text-center mb-12">
-          What your client says
-        </h2>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-yellow/20 px-4 py-1.5 rounded-full mb-3">
+            <span className="font-nunito font-bold text-dark text-sm">4.5 ⭐ Google Rating</span>
+            <span className="text-gray-500 text-xs">· Based on 649+ Verified Reviews</span>
+          </div>
+          <h2 className="font-fredoka text-dark text-3xl md:text-4xl">
+            What Food Lovers Say About Grill Yard
+          </h2>
+          <p className="font-dm text-gray text-sm mt-2">Real feedback from diners in Sector I-8 Markaz, Islamabad</p>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t, i) => (
             <BounceUp key={i} delay={i * 0.1}>
               <div className="bg-white rounded-2xl shadow-card p-6 hover:scale-[1.02] transition-transform">

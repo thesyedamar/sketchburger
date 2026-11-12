@@ -9,40 +9,50 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-nunito font-bold text-yellow mb-4">ADDRESS</h3>
+            <h3 className="font-nunito font-bold text-yellow mb-4">GRILL YARD</h3>
             <Link href="/" className="flex items-center gap-1 mb-4">
-              <span className="font-fredoka text-xl">
-                <span className="text-yellow">Village</span>
-                <span className="text-white"> Kitchen</span>
+              <span className="font-fredoka text-2xl">
+                <span className="text-yellow">Grill</span>
+                <span className="text-white"> Yard</span>
               </span>
             </Link>
+            <p className="font-dm text-xs text-gray-400 mb-3">
+              All about Taste and Quality! Steaks, Burgers, Pastas, Chinese & Continental.
+            </p>
             <div className="flex flex-col gap-3 text-gray-300 font-dm text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-yellow mt-1 flex-shrink-0" />
-                <span>GV5X+2F6, Dargai</span>
+                <span>EOBI Plaza, Near Save Mart, Sector I-8 Markaz, Islamabad, 44790</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-yellow flex-shrink-0" />
-                <span>0347 1900500</span>
+                <a href="tel:03205401241" className="hover:text-yellow transition-colors">0320 5401241 / 051-2751370</a>
               </div>
             </div>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/grillyardislamabad"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Grill Yard on Facebook"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/grillyardislamabad"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Grill Yard on Instagram"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923471900500"
+                href="https://wa.me/923205401241"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Grill Yard on WhatsApp"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow hover:text-dark transition-colors"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -55,11 +65,16 @@ export default function Footer() {
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">ORDER ONLINE</h3>
             <ul className="flex flex-col gap-3">
-              {["WhatsApp Order", "Call Us", "View Menu", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#" className="font-dm text-gray-300 hover:text-yellow transition-colors text-sm">
-                    {item}
-                  </a>
+              {[
+                { name: "WhatsApp Order", href: "https://wa.me/923205401241" },
+                { name: "Call 0320 5401241", href: "tel:03205401241" },
+                { name: "View Full Menu", href: "/menu" },
+                { name: "Find Us / Contact", href: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="font-dm text-gray-300 hover:text-yellow transition-colors text-sm">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -68,11 +83,12 @@ export default function Footer() {
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">OPENING HOURS</h3>
             <div className="font-dm text-gray-300 text-sm space-y-2">
-              <p>Open Daily: 11:30 AM - 11:30 PM</p>
-              <p>Delivery available</p>
+              <p className="font-semibold text-white">Daily: 12:00 PM – 12:00 AM</p>
+              <p>Dine-In · Outdoor Seating · Takeaway · Delivery</p>
+              <p className="text-xs text-yellow">Happy Hour & Late-Night Bites</p>
               <div className="flex items-center gap-2 mt-2">
                 <span className="w-2 h-2 rounded-full bg-green pulse-green"></span>
-                <span className="text-green">Open Now</span>
+                <span className="text-green font-semibold">Open Now · Closes 12 AM</span>
               </div>
             </div>
           </div>
@@ -80,12 +96,12 @@ export default function Footer() {
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">STAY UPDATED</h3>
             <p className="font-dm text-gray-300 text-sm mb-4">
-              Subscribe to get special offers and updates
+              Get special steakhouse offers, sports match screening alerts, & deals.
             </p>
             <div className="flex flex-col gap-2">
               <input
                 type="text"
-                placeholder="Your WhatsApp number"
+                placeholder="Your phone number"
                 className="bg-dark border border-white/20 rounded-lg px-4 py-2 text-white font-dm text-sm focus:outline-none focus:border-yellow"
               />
               <button className="bg-yellow text-dark font-nunito font-bold rounded-lg px-4 py-2 hover:bg-yellow-light transition-colors">
@@ -97,10 +113,10 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-dm text-gray-500 text-xs">
-            © 2025 Village Kitchen. All rights reserved.
+            © 2026 Grill Yard Islamabad. All rights reserved.
           </p>
           <p className="font-dm text-gray-500 text-xs">
-            Made with ❤️ in Dargai, Pakistan
+            EOBI Plaza, Sector I-8 Markaz, Islamabad · Made with ❤️
           </p>
         </div>
       </div>
