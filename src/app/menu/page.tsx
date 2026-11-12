@@ -155,14 +155,14 @@ export default function MenuPage() {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="relative"
                 >
-                  <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-yellow/25 absolute inset-0 blur-lg" />
+                  <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-blue-500/25 absolute inset-0 blur-2xl pointer-events-none" />
                   <div className="relative z-10">
                     <Image
                       src="/images/BBQ.png"
                       alt="Grill Yard Sizzling Steak"
                       width={380}
                       height={380}
-                      className="w-60 h-60 md:w-72 md:h-72 object-contain drop-shadow-2xl"
+                      className="w-60 h-60 md:w-72 md:h-72 object-contain drop-shadow-[0_25px_45px_rgba(30,64,175,0.3)]"
                       priority
                     />
                   </div>

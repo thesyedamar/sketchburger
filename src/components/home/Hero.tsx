@@ -92,9 +92,9 @@ export default function Hero() {
 
           <div className="relative flex justify-center order-1 md:order-2">
             <motion.div
-              className="w-56 h-56 sm:w-72 sm:h-72 md:w-[420px] md:h-[420px] rounded-full bg-yellow/25 absolute"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              className="w-56 h-56 sm:w-72 sm:h-72 md:w-[420px] md:h-[420px] rounded-full bg-blue-500/25 blur-3xl absolute pointer-events-none"
+              animate={{ scale: [1, 1.08, 1], opacity: [0.75, 0.95, 0.75] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             />
 
             <motion.div
@@ -107,7 +107,7 @@ export default function Hero() {
                 alt="Delicious BBQ"
                 width={350}
                 height={350}
-                className="w-48 h-48 sm:w-64 sm:h-64 md:w-[450px] md:h-[450px] max-w-full h-auto drop-shadow-2xl"
+                className="w-48 h-48 sm:w-64 sm:h-64 md:w-[450px] md:h-[450px] max-w-full h-auto drop-shadow-[0_25px_45px_rgba(30,64,175,0.3)]"
                 priority
               />
             </motion.div>
