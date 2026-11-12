@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, ShoppingBag, Menu, X, MessageCircle } from "lucide-react";
 import { useCartStore } from "@/lib/cartStore";
+import CartDrawer from "@/components/layout/CartDrawer";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const totalItems = useCartStore((s) => s.totalItems());
+  const openCart = useCartStore((s) => s.openCart);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -26,7 +28,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.nav
+    <>
+      <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300 ${
@@ -64,14 +67,38 @@ export default function Navbar() {
             <Phone className="w-4 h-4 text-yellow" />
             <span>0320 5401241</span>
           </a>
-          <Link href="/menu" className="p-2 hover:text-yellow transition-colors relative" aria-label="Shopping Cart">
-            <ShoppingBag className="w-5 h-5" />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-yellow text-dark text-xs font-bold rounded-full flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </Link>
+          <button
+            type="button"
+            onClick={openCart}
+            className="p-2 hover:text-yellow transition-colors relative cursor-pointer group"
+            aria-label="Shopping Cart"
+          >
+            <motion.div
+              key={`desktop-bag-${totalItems}`}
+              animate={totalItems > 0 ? { rotate: [0, -12, 10, -6, 0], scale: [1, 1.1, 1] } : {}}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              <ShoppingBag className="w-5 h-5 text-dark group-hover:text-yellow transition-colors" />
+            </motion.div>
+            <AnimatePresence mode="popLayout">
+              {totalItems > 0 && (
+                <motion.span
+                  key={`desktop-count-${totalItems}`}
+                  initial={{ scale: 0.4, opacity: 0 }}
+                  animate={{ scale: [1, 1.45, 0.95, 1], opacity: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  transition={{
+                    duration: 0.35,
+                    times: [0, 0.4, 0.7, 1],
+                    ease: "easeInOut",
+                  }}
+                  className="absolute -top-1 -right-1 w-5 h-5 bg-yellow text-dark text-xs font-bold rounded-full flex items-center justify-center shadow-md select-none pointer-events-none"
+                >
+                  {totalItems}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
           <a
             href="https://wa.me/923205401241"
             target="_blank"
@@ -83,13 +110,47 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2"
-          aria-label="Toggle navigation menu"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="flex md:hidden items-center gap-2">
+          <button
+            type="button"
+            onClick={openCart}
+            className="p-2 hover:text-yellow transition-colors relative cursor-pointer group"
+            aria-label="Shopping Cart"
+          >
+            <motion.div
+              key={`mobile-bag-${totalItems}`}
+              animate={totalItems > 0 ? { rotate: [0, -12, 10, -6, 0], scale: [1, 1.1, 1] } : {}}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              <ShoppingBag className="w-5 h-5 text-dark" />
+            </motion.div>
+            <AnimatePresence mode="popLayout">
+              {totalItems > 0 && (
+                <motion.span
+                  key={`mobile-count-${totalItems}`}
+                  initial={{ scale: 0.4, opacity: 0 }}
+                  animate={{ scale: [1, 1.45, 0.95, 1], opacity: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  transition={{
+                    duration: 0.35,
+                    times: [0, 0.4, 0.7, 1],
+                    ease: "easeInOut",
+                  }}
+                  className="absolute -top-1 -right-1 w-5 h-5 bg-yellow text-dark text-xs font-bold rounded-full flex items-center justify-center shadow-md select-none pointer-events-none"
+                >
+                  {totalItems}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -131,5 +192,9 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
-  );
+
+    {/* Global Cart Drawer */}
+    <CartDrawer />
+  </>
+);
 }

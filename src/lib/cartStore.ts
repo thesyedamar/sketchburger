@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-interface CartItem {
+export interface CartItem {
   id: number;
   name: string;
   price: number;
@@ -10,9 +10,14 @@ interface CartItem {
 
 interface CartStore {
   items: Record<number, CartItem>;
+  isOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
+  toggleCart: () => void;
   addItem: (item: Omit<CartItem, "qty">) => void;
   increment: (id: number) => void;
   decrement: (id: number) => void;
+  removeItem: (id: number) => void;
   clearCart: () => void;
   totalItems: () => number;
   totalPrice: () => number;
@@ -20,6 +25,10 @@ interface CartStore {
 
 export const useCartStore = create<CartStore>((set, get) => ({
   items: {},
+  isOpen: false,
+  openCart: () => set({ isOpen: true }),
+  closeCart: () => set({ isOpen: false }),
+  toggleCart: () => set((s) => ({ isOpen: !s.isOpen })),
   addItem: (item) =>
     set((s) => ({
       items: {
@@ -38,7 +47,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
     })),
   decrement: (id) =>
     set((s) => {
-      const qty = s.items[id]?.qty - 1;
+      const qty = (s.items[id]?.qty || 1) - 1;
       if (qty <= 0) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { [id]: _deleted, ...rest } = s.items;
@@ -50,6 +59,12 @@ export const useCartStore = create<CartStore>((set, get) => ({
           [id]: { ...s.items[id], qty },
         },
       };
+    }),
+  removeItem: (id) =>
+    set((s) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { [id]: _deleted, ...rest } = s.items;
+      return { items: rest };
     }),
   clearCart: () => set({ items: {} }),
   totalItems: () =>
