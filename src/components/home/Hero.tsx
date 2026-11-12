@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import PromoTag from "@/components/ui/PromoTag";
 
 const decorations = [
   { emoji: "🥩", className: "top-4 left-10", animate: { y: [0, -12, 0], rotate: [0, 15, 0] }, duration: 2.5 },
@@ -16,8 +15,8 @@ const decorations = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-cream min-h-[90vh] md:min-h-screen pt-20 md:pt-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-12 py-8 md:py-20">
+    <section className="relative bg-cream overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 pt-4 pb-10 md:pt-6 md:pb-14">
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
           <div className="pl-0 md:pl-8 order-2 md:order-1">
             <motion.span
@@ -35,8 +34,7 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="font-fredoka text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-dark leading-tight"
             >
-              <span className="block">Grill</span>
-              <span className="block text-yellow">Yard</span>
+              <span>Grill</span> <span className="text-yellow">Yard</span>
             </motion.h1>
 
             <motion.div
@@ -125,12 +123,6 @@ export default function Hero() {
               </motion.span>
             ))}
 
-            <PromoTag className="absolute top-2 md:top-4 left-2 md:left-4">
-              <div className="text-center spin-slow">
-                <span>20%</span>
-                <span className="block text-[10px]">OFF</span>
-              </div>
-            </PromoTag>
           </div>
         </div>
       </div>

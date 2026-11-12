@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
@@ -10,11 +11,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-nunito font-bold text-yellow mb-4">GRILL YARD</h3>
-            <Link href="/" className="flex items-center gap-1 mb-4">
-              <span className="font-fredoka text-2xl">
-                <span className="text-yellow">Grill</span>
-                <span className="text-white"> Yard</span>
-              </span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/grill%20yard%20logo.png"
+                alt="Grill Yard"
+                width={140}
+                height={52}
+                className="h-10 w-auto object-contain brightness-105"
+              />
             </Link>
             <p className="font-dm text-xs text-gray-400 mb-3">
               All about Taste and Quality! Steaks, Burgers, Pastas, Chinese & Continental.

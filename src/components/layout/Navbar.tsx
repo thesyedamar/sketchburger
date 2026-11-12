@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, ShoppingBag, Menu, X, MessageCircle } from "lucide-react";
 import { useCartStore } from "@/lib/cartStore";
@@ -36,13 +37,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-fredoka text-xl md:text-2xl tracking-wide">
-            <span className="text-yellow">Grill</span>
-            <span className="text-dark"> Yard</span>
-          </span>
-          <span className="hidden sm:inline-block bg-yellow/15 text-dark font-nunito font-bold text-[11px] px-2.5 py-0.5 rounded-full border border-yellow/30">
-            I-8 Markaz
-          </span>
+          <Image
+            src="/images/grill%20yard%20logo.png"
+            alt="Grill Yard"
+            width={150}
+            height={56}
+            className="h-10 md:h-11 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
